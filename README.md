@@ -27,7 +27,7 @@ Students that have been invited and joined
 - [x] Shivani Bhatt - **(Onboard)**
 - [x] Marwa Hassan - **(Onboard)**
 - [x] Rajdeep Minhas
-- [x] Avalyn Jessen
+- [x] Avalyn Jessen - **(Onboard)**
 - [ ] Andre Tichinski
 - [ ] Christopher Law
 - [ ] Kai Xiao
