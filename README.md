@@ -11,7 +11,7 @@ Students that have been invited and joined
 ---------
 - [x] Praise Koobee - **(Onboard)**
 - [x] Fazal Kamal
-- [x] Justin Mathenson
+- [x] Justin Mathenson - **(Onboard)**
 - [x] Samuel Samuel - **(Onboard)**
 - [x] Mohamed Rezk
 - [x] Eric Banigo
