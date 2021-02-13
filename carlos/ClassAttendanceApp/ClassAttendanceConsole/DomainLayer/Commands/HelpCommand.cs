@@ -19,6 +19,7 @@ namespace DomainLayer.Commands
         public CommandResult Execute()
         {
             Console.WriteLine(_helpText);
+            
             return CommandResult.OkResult();
         }
 

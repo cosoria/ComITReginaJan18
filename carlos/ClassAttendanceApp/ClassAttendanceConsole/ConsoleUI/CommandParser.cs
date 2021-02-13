@@ -13,6 +13,7 @@ namespace ConsoleUI
             }
 
             ICommand command = null;
+
             commandString = commandString.ToLowerInvariant();
             
             if (commandString.StartsWith("exit"))
@@ -27,7 +28,7 @@ namespace ConsoleUI
 
             if (commandString.StartsWith("take"))
             {
-                command = new ListCommand();
+                command = new TakeCommand();
             }
 
             if (command != null)

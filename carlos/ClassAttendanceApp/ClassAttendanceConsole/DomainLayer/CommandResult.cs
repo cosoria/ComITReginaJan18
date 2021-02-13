@@ -3,7 +3,7 @@ namespace DomainLayer
 {
     public class CommandResult
     {
-        public bool Exit { get; private set; }
+        public bool Exit { get; private set; } = false;
         public bool Success => string.IsNullOrWhiteSpace(ErrorText);
         public bool Failed => !Success;
         public string ErrorText { get; private set; } = string.Empty;
