@@ -16,12 +16,12 @@ Students that have been invited and joined
 - [x] Mohamed Rezk
 - [x] Eric Banigo
 - [x] Kalpesh Kunvar
-- [ ] Dornubari Dumpe
+- [x] Dornubari Dumpe
 - [x] Bilal Alissa - **(Onboard)**
 - [x] Eman Badreldin
 - [ ] Enesoso Charles
 - [x] Gayatri Kunvar
-- [ ] Doo-olo Agara
+- [x] Doo-olo Agara
 - [ ] Shakirah Omotayo
 - [x] Marmar Mojdehi - **(Onboard)**
 - [x] Shivani Bhatt - **(Onboard)**
