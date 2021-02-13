@@ -1,5 +1,5 @@
 ﻿
-namespace DomainLayer
+namespace DomainLayer.Commands
 {
     public class CommandResult
     {

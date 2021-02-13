@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DomainLayer
+﻿namespace DomainLayer.Commands
 {
     public interface ICommand
     {
