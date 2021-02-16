@@ -1,12 +1,12 @@
-﻿namespace DomainLayer.Commands
-{
-    public class ExitCommand : ICommand
-    {
-        public void Init(string commandParameters)
-        {
-        }
+﻿using System;
+using System.Collections.Generic;
 
-        public string GetHelpText()
+namespace DomainLayer.Commands
+{
+    public class ExitCommand : CommandBase
+    {
+        
+        public override string GetHelpText()
         {
             return 
 @"      Usage: 
@@ -14,7 +14,7 @@
 ";
         }
 
-        public CommandResult Execute()
+        public override CommandResult Execute()
         {
             return CommandResult.ExitResult();
         }

@@ -1,4 +1,5 @@
-﻿using DomainLayer;
+﻿using System;
+using DomainLayer;
 using DomainLayer.Commands;
 
 namespace ConsoleUI
@@ -11,29 +12,16 @@ namespace ConsoleUI
             {
                 return null;
             }
-
-            ICommand command = null;
-
-            commandString = commandString.ToLowerInvariant();
             
-            if (commandString.StartsWith("exit"))
-            {
-                command = new ExitCommand();
-            }
+            commandString = commandString.ToLowerInvariant();
 
-            if (commandString.StartsWith("list"))
-            {
-                command = new ListCommand();
-            }
+            var cmdParams = commandString.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-            if (commandString.StartsWith("take"))
-            {
-                command = new TakeCommand();
-            }
-
+            var command = CommandFactory.Create(cmdParams[0]);
+            
             if (command != null)
             {
-                command.Init(commandString);
+                command.Init(cmdParams);
             }
             
             return command;

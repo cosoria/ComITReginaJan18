@@ -1,4 +1,6 @@
 ﻿
+using System.Collections;
+
 namespace DomainLayer.Commands
 {
     public class CommandResult

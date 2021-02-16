@@ -18,7 +18,7 @@ namespace ConsoleUI
             {
                 Console.Write(" :> ");
                 var commandString = Console.ReadLine();
-
+                
                 exit = Process(commandString);
             }
 

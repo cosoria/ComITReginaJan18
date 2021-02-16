@@ -2,13 +2,10 @@
 
 namespace DomainLayer.Commands
 {
-    public class HelpCommand : ICommand
+    public class HelpCommand : CommandBase
     {
-        public void Init(string commandParameters)
-        {
-        }
-
-        public string GetHelpText()
+        private string subCommand = string.Empty; 
+        public override string GetHelpText()
         {
             return
 @"      Usage:
@@ -16,11 +13,37 @@ namespace DomainLayer.Commands
 ";
         }
 
-        public CommandResult Execute()
+        public override void Init(string[] commandParameters)
         {
+            this.subCommand = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(commandParameters[1]))
+            {
+                return;
+            }
+
+            subCommand = commandParameters[1];
+        }
+
+        public override CommandResult Execute()
+        {
+            if (!string.IsNullOrWhiteSpace(subCommand))
+            {
+                var command = GetCommand(subCommand);
+
+                Console.WriteLine(command.GetHelpText());
+
+                return CommandResult.OkResult();
+            }
+
             Console.WriteLine(_helpText);
-            
+
             return CommandResult.OkResult();
+        }
+
+        private ICommand GetCommand(string commandText)
+        {
+            return CommandFactory.Create(commandText);
         }
 
         private string _helpText =

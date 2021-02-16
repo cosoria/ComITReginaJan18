@@ -2,7 +2,7 @@
 {
     public class TakeCommand : ICommand
     {
-        public void Init(string commandParameters)
+        public void Init(string[] commandParameters)
         {
         }
 

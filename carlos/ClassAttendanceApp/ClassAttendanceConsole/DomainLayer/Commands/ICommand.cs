@@ -1,8 +1,10 @@
-﻿namespace DomainLayer.Commands
+﻿using System;
+
+namespace DomainLayer.Commands
 {
     public interface ICommand
     {
-        void Init(string commandParameters);
+        void Init(string[] commandParameters);
         string GetHelpText();
         CommandResult Execute();
     }
