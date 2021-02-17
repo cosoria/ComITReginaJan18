@@ -25,12 +25,7 @@ namespace DomainLayer.Entities
             {
                 throw new ArgumentException("lastName");
             }
-
-            if (languages.Any())
-            {
-                throw new ArgumentException("languages");
-            }
-
+            
             FirstName = firstName;
             LastName = lastName;
             Level = level;

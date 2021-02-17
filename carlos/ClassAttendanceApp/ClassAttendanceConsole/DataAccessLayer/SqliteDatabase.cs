@@ -1,4 +1,5 @@
-﻿using DomainLayer.Contracts;
+﻿using System.Collections.Generic;
+using DomainLayer.Contracts;
 using DomainLayer.Entities;
 
 namespace DataAccessLayer
@@ -10,7 +11,7 @@ namespace DataAccessLayer
             throw new System.NotImplementedException();
         }
 
-        public Student GetAllStudents()
+        public IEnumerable<Student> GetAllStudents()
         {
             throw new System.NotImplementedException();
         }
@@ -20,7 +21,7 @@ namespace DataAccessLayer
             throw new System.NotImplementedException();
         }
 
-        public Class GetAllClasses()
+        public IEnumerable<Class> GetAllClasses()
         {
             throw new System.NotImplementedException();
         }

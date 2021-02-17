@@ -8,7 +8,7 @@ namespace ConsoleUI
 {
     class Program
     {
-        private static CommandParser _commandParser;
+        private static CommandParser _commandParser = new CommandParser();
 
         static void Main(string[] args)
         {
@@ -32,7 +32,6 @@ namespace ConsoleUI
 
         static void Init()
         {
-            SystemTime.Init();
             CommandFactory.Init(DatabaseFactory.Create(""));
         }
 

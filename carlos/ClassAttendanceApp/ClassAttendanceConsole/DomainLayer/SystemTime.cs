@@ -11,12 +11,21 @@ namespace DomainLayer
             get { return _systemClock(); }
         }
 
-        public static void Init(Func<DateTime> clock = null)
+        public static void SetClock(Func<DateTime> newClock = null)
         {
-            if (clock != null)
+            if (newClock != null)
             {
-                _systemClock = clock;
+                _systemClock = newClock;
             }
+            else
+            {
+                _systemClock = RealtimeClock;
+            }
+        }
+
+        public static void ResetClock()
+        {
+            _systemClock = RealtimeClock;
         }
 
         private static DateTime RealtimeClock()

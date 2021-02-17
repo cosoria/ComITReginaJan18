@@ -5,17 +5,29 @@ namespace DomainLayer.Commands
 {
     public abstract class CommandBase : ICommand
     {
+        protected string _command;
         protected string _entityType;
         protected int _id;
 
         public virtual void Init(string[] commandParameters)
         {
+            _command = commandParameters[0];
             _entityType = string.Empty;
+
+            if (commandParameters.Length < 2)
+            {
+                return;
+            }
+
             if (!string.IsNullOrWhiteSpace(commandParameters[1]))
             {
                 _entityType = commandParameters[1];
             }
 
+            if (commandParameters.Length < 3)
+            {
+                return;
+            }
 
             _id = -1;
             if (!string.IsNullOrWhiteSpace(commandParameters[2]))

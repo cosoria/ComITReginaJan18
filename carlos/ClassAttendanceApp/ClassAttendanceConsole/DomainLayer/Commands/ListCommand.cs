@@ -55,18 +55,54 @@ namespace DomainLayer.Commands
 
         private void ListTeacherAssistant(int id)
         {
-            
+            Console.Write(_database.GetCourse().TeacherAssistant.ToString());
         }
 
         private void ListTeacher(int id)
         {
-            
+            Console.Write(_database.GetCourse().Teacher.ToString());
+        }
+        
+        private void ListCourse(int courseNumber)
+        {
+            Console.Write(_database.GetCourse().ToString());
         }
 
+        private void ListClass(int classNumber)
+        {
+            if (classNumber > 0)
+            {
+                Console.Write(_database.GetClass(classNumber).ToString());
+            }
+            else
+            {
+                foreach (var c in _database.GetAllClasses())
+                {
+                    Console.WriteLine(c.ToString());
+                }
+                
+            }
+        }
+
+        private void ListStudent(int studentNumber)
+        {
+            if (studentNumber > 0)
+            {
+                Console.WriteLine(_database.GetStudent(studentNumber).ToString());
+            }
+            else
+            {
+                foreach (var student in _database.GetAllStudents())
+                {
+                    Console.WriteLine(student.ToString());
+                }
+            }
+        }
+        
         public override string GetHelpText()
         {
             return
-@"      Overview: 
+                @"      Overview: 
             Displays student, class and course summary and detail information
             enter the entity name after the list command for 
     
@@ -83,38 +119,6 @@ namespace DomainLayer.Commands
             :> list student 15      : display detail information for student with id 15     
             :> list course          : display course information 
 ";
-        }
-
-        
-
-        private void ListCourse(int courseNumber)
-        {
-
-        }
-
-        private void ListClass(int classNumber)
-        {
-
-        }
-
-        private void ListStudent(int studentNumber)
-        {
-            if (studentNumber > 0)
-            {
-                _database.GetStudent(studentNumber);
-            }
-
-            var allStudents = GetAllStudents();
-
-            foreach (var student in allStudents)
-            {
-                Console.WriteLine("FirstName:" + student.FirstName + " LastName:" + student.LastName);
-            }
-        }
-
-        private IEnumerable<Student> GetAllStudents()
-        {
-            return Enumerable.Empty<Student>();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using DomainLayer;
 using DomainLayer.Contracts;
 using DomainLayer.Entities;
 
@@ -14,27 +16,25 @@ namespace DataAccessLayer
         {
             Init();
         }
-
         
-
         public Student GetStudent(int id)
         {
-            throw new System.NotImplementedException();
+            return _course.Students.Skip(id - 1).Take(1).First();
         }
 
-        public Student GetAllStudents()
+        public IEnumerable<Student> GetAllStudents()
         {
-            throw new System.NotImplementedException();
+            return _course.Students;
         }
 
         public Class GetClass(int id)
         {
-            throw new System.NotImplementedException();
+            return _course.Classes.Skip(id - 1).Take(1).First();
         }
 
-        public Class GetAllClasses()
+        public IEnumerable<Class> GetAllClasses()
         {
-            throw new System.NotImplementedException();
+            return _course.Classes;
         }
 
         public Course GetCourse()
@@ -44,12 +44,16 @@ namespace DataAccessLayer
 
         private void Init()
         {
+            SystemTime.SetClock(() => new DateTime(2021,01,01));
+
             _course = new Course(".NET Core Programming", new DateTime(2021, 01, 18), 100);
             _course.SetTeacher(new Teacher("Carlos", "Osoria", ".NET Framework Stack"));
             _course.SetTeacherAssistant(new TeacherAssistant("Damian", "Jais", ".NET Framework Stack"));
             
             RegisterStudents();
             CreateClasses();
+
+            SystemTime.ResetClock();
         }
 
         private void RegisterStudents()
@@ -85,7 +89,7 @@ namespace DataAccessLayer
             for (var i = 1; i <= 30; i++)
             {
                 var startDate = GetStartDateForClass(i);
-                _course.AddClass(new Class($"Class #{i}", startDate, new []{new Topic("",100)}, _course));
+                _course.AddClass(new Class($"Class #{i}", startDate, new []{new Topic($".NET Core Topic #{i}", 100)}, _course));
             }
         }
 
