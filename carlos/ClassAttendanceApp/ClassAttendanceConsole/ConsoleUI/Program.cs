@@ -32,6 +32,7 @@ namespace ConsoleUI
 
         static void Init()
         {
+            SystemTime.Init();
             CommandFactory.Init(DatabaseFactory.Create(""));
         }
 

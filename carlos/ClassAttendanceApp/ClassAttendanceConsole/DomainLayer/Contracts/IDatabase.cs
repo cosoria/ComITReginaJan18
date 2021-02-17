@@ -10,6 +10,6 @@ namespace DomainLayer.Contracts
         Class GetClass(int id);
         Class GetAllClasses();
 
-        Class GetCourse();
+        Course GetCourse();
     }
 }

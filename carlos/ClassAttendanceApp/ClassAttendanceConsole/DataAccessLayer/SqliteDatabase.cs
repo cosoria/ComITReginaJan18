@@ -25,7 +25,7 @@ namespace DataAccessLayer
             throw new System.NotImplementedException();
         }
 
-        public Class GetCourse()
+        public Course GetCourse()
         {
             throw new System.NotImplementedException();
         }
