@@ -1,20 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using DomainLayer.Contracts;
 
 namespace DomainLayer.Commands
 {
-    public class ExitCommand : CommandBase
+    public class ExitCommand : ICommand
     {
-        
-        public override string GetHelpText()
+        public void Init(string[] commandParameters)
+        {
+        }
+
+        public string GetHelpText()
         {
             return 
-@"      Usage: 
-            exit : Exits the program
+@"      Overview: 
+            exit: Exits the program
+        
+        Usage:
+            exit 
+
+        Example:
+            :> exit
 ";
         }
 
-        public override CommandResult Execute()
+        public CommandResult Execute()
         {
             return CommandResult.ExitResult();
         }

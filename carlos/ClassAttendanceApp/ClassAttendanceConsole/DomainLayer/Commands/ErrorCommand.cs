@@ -1,4 +1,6 @@
-﻿namespace DomainLayer.Commands
+﻿using DomainLayer.Contracts;
+
+namespace DomainLayer.Commands
 {
     public class ErrorCommand : ICommand
     {

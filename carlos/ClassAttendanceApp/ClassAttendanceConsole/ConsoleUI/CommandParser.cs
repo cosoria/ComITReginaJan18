@@ -1,10 +1,10 @@
 ﻿using System;
-using DomainLayer;
 using DomainLayer.Commands;
+using DomainLayer.Contracts;
 
 namespace ConsoleUI
 {
-    class CommandParser
+    internal class CommandParser
     {
         internal ICommand Parse(string commandString)
         {

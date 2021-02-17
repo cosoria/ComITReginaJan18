@@ -1,12 +1,22 @@
-﻿namespace DomainLayer.Commands
+﻿using System.ComponentModel;
+using DomainLayer.Contracts;
+
+namespace DomainLayer.Commands
 {
     public static class CommandFactory
     {
+        private static IDatabase _database;
+
+        public static void Init(IDatabase database)
+        {
+            _database = database;
+        }
+
         public static ICommand Create(string commandName)
         {
             if (string.IsNullOrWhiteSpace(commandName))
             {
-                return ErrorCommand();
+                return new ErrorCommand();
             }
 
             if (commandName == "exit")
@@ -16,12 +26,12 @@
 
             if (commandName == "take")
             {
-                return new TakeCommand();
+                return new AttendanceCommand(_database);
             }
 
             if (commandName == "list")
             {
-                return new ListCommand();
+                return new ListCommand(_database);
             }
 
             if (commandName == "help")
@@ -29,7 +39,7 @@
                 return new HelpCommand();
             }
 
-            return ErrorCommand();
+            return new ErrorCommand();
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DomainLayer.Commands;
 
-namespace DomainLayer.Commands
+namespace DomainLayer.Contracts
 {
     public interface ICommand
     {
