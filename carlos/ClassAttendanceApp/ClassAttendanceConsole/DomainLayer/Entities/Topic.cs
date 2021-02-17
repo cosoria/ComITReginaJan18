@@ -1,6 +1,8 @@
-﻿namespace DomainLayer.Entities
+﻿using DomainLayer.Contracts;
+
+namespace DomainLayer.Entities
 {
-    public class Topic
+    public class Topic : IConsolePrintable
     {
         public string Title { get; private set; }
         public int Level { get; private set; }
@@ -9,6 +11,21 @@
         {
             Title = title;
             Level = level;
+        }
+        
+        public string PrintSummary()
+        {
+            return Title;
+        }
+
+        public string PrintDetails()
+        {
+            return $"{Title} Level:{Level}";
+        }
+
+        public override string ToString()
+        {
+            return PrintSummary();
         }
     }
 }

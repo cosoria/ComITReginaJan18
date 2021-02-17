@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
+using DomainLayer.Contracts;
 
 namespace DomainLayer.Entities
 {
-    public class Student
+    public class Student : IConsolePrintable
     {
         private List<string> _languages = new List<string>();
         public string FirstName { get; private set; }
@@ -56,9 +57,32 @@ namespace DomainLayer.Entities
             _languages.Add(language);
         }
 
-        public bool KnowLanguage(string language)
+        
+        public string PrintSummary()
         {
-            return true;
+            return $"{FirstName} {LastName}";
+        }
+
+        public string PrintDetails()
+        {
+            var level = GetLevelString();
+            return $"{FirstName} {LastName} Level:{level}";
+        }
+
+        private string GetLevelString()
+        {
+            if (Level == 0) return "None";
+            if (Level == 1) return "Beginner";
+            if (Level == 2) return "Intermediate";
+            if (Level == 3) return "Senior";
+            if (Level > 3) return "Alien";
+
+            return "Unknown";
+        }
+
+        public override string ToString()
+        {
+            return PrintSummary();
         }
     }
 }

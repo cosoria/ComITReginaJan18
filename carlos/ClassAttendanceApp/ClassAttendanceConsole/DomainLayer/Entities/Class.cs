@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DomainLayer.Contracts;
 
 namespace DomainLayer.Entities
 {
-    public class Class
+    public class Class : IConsolePrintable
     {
         private List<Topic> _topics = new List<Topic>();
         private List<Attendance> _attendance = new List<Attendance>();
@@ -73,6 +74,21 @@ namespace DomainLayer.Entities
             }
 
             _topics.Remove(topic);
+        }
+
+        public string PrintSummary()
+        {
+            return Title;
+        }
+
+        public string PrintDetails()
+        {
+            return $"{Title} Start:{StartDate}";
+        }
+
+        public override string ToString()
+        {
+            return PrintSummary();
         }
     }
 }

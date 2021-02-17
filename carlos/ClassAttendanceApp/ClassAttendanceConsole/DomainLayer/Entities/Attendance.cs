@@ -1,6 +1,8 @@
-﻿namespace DomainLayer.Entities
+﻿using DomainLayer.Contracts;
+
+namespace DomainLayer.Entities
 {
-    public class Attendance
+    public class Attendance : IConsolePrintable
     {
         public Class Class { get; private set; }
         public Student Student { get; private set; }
@@ -16,6 +18,21 @@
         public void SetStatus(AttendanceStatus status)
         {
             Status = status;
+        }
+
+        public string PrintSummary()
+        {
+            return Status.ToString();
+        }
+
+        public string PrintDetails()
+        {
+            return Status.ToString();
+        }
+
+        public override string ToString()
+        {
+            return PrintSummary();
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using DomainLayer.Contracts;
 
 namespace DomainLayer.Entities
 {
-    public class Course
+    public class Course : IConsolePrintable
     {
         private List<Student> _students = new List<Student>();
         private List<Class> _classes = new List<Class>();
@@ -66,6 +67,21 @@ namespace DomainLayer.Entities
             }
 
             _classes.Remove(theClass);
+        }
+
+        public string PrintSummary()
+        {
+            return Title;
+        }
+
+        public string PrintDetails()
+        {
+            return Title;
+        }
+
+        public override string ToString()
+        {
+            return PrintSummary();
         }
     }
 }
