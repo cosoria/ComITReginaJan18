@@ -9,7 +9,7 @@ Enjoy!
 
 Students that have been invited and joined
 ---------
-- [x] Praise Koobee - **(Onboard)**
+- [x] Praise Koobee 
 - [x] Fazal Kamal - **(Onboard)**
 - [x] Justin Mathenson - **(Onboard)**
 - [x] Samuel Samuel - **(Onboard)**
