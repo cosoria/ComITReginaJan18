@@ -9,29 +9,32 @@ Enjoy!
 
 Students that have been invited and joined
 ---------
+- [ ] Shakirah Omotayo
+- [ ] Andre Tichinski
+- [ ] Christopher Law
+- [ ] Kai Xiao
+- [ ] Nitin Bhagat
+- [ ] Enesoso Charles
+- [x] Doo-olo Agara
+- [x] Eman Badreldin
+- [x] Mohamed Rezk
+- [x] Eric Banigo
 - [x] Praise Koobee 
 - [x] Fazal Kamal - **(Onboard)**
 - [x] Justin Mathenson - **(Onboard)**
 - [x] Samuel Samuel - **(Onboard)**
-- [x] Mohamed Rezk
-- [x] Eric Banigo
 - [x] Kalpesh Kunvar - **(Onboard)**
 - [x] Dornubari Dumpe - **(Onboard)**
 - [x] Bilal Alissa - **(Onboard)**
-- [x] Eman Badreldin
-- [ ] Enesoso Charles
-- [x] Gayatri Kunvar - **(Onboard)**
-- [x] Doo-olo Agara
-- [ ] Shakirah Omotayo
+- [x] Samir Momin - **(Onboard)**
 - [x] Marmar Mojdehi - **(Onboard)**
 - [x] Shivani Bhatt - **(Onboard)**
 - [x] Marwa Hassan - **(Onboard)**
 - [x] Rajdeep Minhas - **(Onboard)**
 - [x] Avalyn Jessen - **(Onboard)**
-- [ ] Andre Tichinski
-- [ ] Christopher Law
-- [ ] Kai Xiao
-- [ ] Nitin Bhagat
-- [x] Samir Momin - **(Onboard)**
+- [x] Gayatri Kunvar - **(Onboard)**
 - [x] Damain Jais - **(Onboard)**
 - [x] Carlos Osoria - **(Onboard)**
+
+
+
