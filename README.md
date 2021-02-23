@@ -22,7 +22,7 @@ Students that have been invited and joined
 - [x] Praise Koobee - ??:??:?? Not in class
 - [x] Fazal Kamal - **(Onboard)** - ??:S1:??
 - [x] Justin Mathenson - **(Onboard)** - Web:S2:Game Leader Board
-- [x] Samuel Samuel - **(Onboard)** - 
+- [x] Samuel Samuel - **(Onboard)** - Web:S2:Media Streamming 
 - [x] Kalpesh Kunvar - **(Onboard)** - Web:S2:Grocery App
 - [x] Dornubari Dumpe - **(Onboard)** - Web:S1:??
 - [x] Bilal Alissa - **(Onboard)** - MIA 
@@ -30,12 +30,11 @@ Students that have been invited and joined
 - [x] Marmar Mojdehi - **(Onboard)** - Web:S2:Parking App
 - [x] Shivani Bhatt - **(Onboard)** - MIA 
 - [x] Marwa Hassan - **(Onboard)** -- Web:S1:Online Portafolio
-- [x] Rajdeep Minhas - **(Onboard)** - Web:S1:Portafolio
+- [x] Rajdeep Minhas - **(Onboard)** - Web:S1:Personal Portafolio
 - [x] Avalyn Jessen - **(Onboard)** - Web:S2:eCommerce
 - [x] Gayatri Kunvar - **(Onboard)** - Web:S1:Salon Management
 - [x] Damain Jais - **(Onboard)**
 - [x] Carlos Osoria - **(Onboard)**
 
-- Web:S1:Online Portafolio
 
 
