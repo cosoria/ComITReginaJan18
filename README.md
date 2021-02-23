@@ -12,7 +12,7 @@ Students that have been invited and joined
 - [x] Andre Tichinski - Web:S2:TimeTracking
 - [ ] Christopher Law - Win:S2:Instant Messenger 
 - [ ] Kai Xiao - 
-- [ ] Nitin Bhagat - 
+- [ ] Nitin Bhagat - MIA
 - [ ] Enesoso Charles - Web:S1:Parking Finding
 - [x] Shakirah Omotayo - Web:S1:Travel Suggest Website
 - [x] Doo-olo Agara - Web:S1:Social Media
