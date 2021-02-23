@@ -9,7 +9,7 @@ Enjoy!
 
 Students that have been invited and joined
 ---------
-- [ ] Andre Tichinski
+- [x] Andre Tichinski
 - [ ] Christopher Law
 - [ ] Kai Xiao
 - [ ] Nitin Bhagat
@@ -24,14 +24,14 @@ Students that have been invited and joined
 - [x] Justin Mathenson - **(Onboard)**
 - [x] Samuel Samuel - **(Onboard)**
 - [x] Kalpesh Kunvar - **(Onboard)**
-- [x] Dornubari Dumpe - **(Onboard)**
+- [x] Dornubari Dumpe - **(Onboard)** - Web:S1:
 - [x] Bilal Alissa - **(Onboard)** - MIA 
 - [x] Samir Momin - **(Onboard)**
 - [x] Marmar Mojdehi - **(Onboard)**
 - [x] Shivani Bhatt - **(Onboard)** - MIA 
 - [x] Marwa Hassan - **(Onboard)**
 - [x] Rajdeep Minhas - **(Onboard)**
-- [x] Avalyn Jessen - **(Onboard)**
+- [x] Avalyn Jessen - **(Onboard)** - Web:S2:eCommerce
 - [x] Gayatri Kunvar - **(Onboard)**
 - [x] Damain Jais - **(Onboard)**
 - [x] Carlos Osoria - **(Onboard)**
