@@ -9,26 +9,26 @@ Enjoy!
 
 Students that have been invited and joined
 ---------
-- [ ] Shakirah Omotayo
 - [ ] Andre Tichinski
 - [ ] Christopher Law
 - [ ] Kai Xiao
 - [ ] Nitin Bhagat
-- [ ] Enesoso Charles
-- [x] Doo-olo Agara
-- [x] Eman Badreldin
+- [ ] Enesoso Charles - Web:S1:Parking Finding
+- [x] Shakirah Omotayo
+- [x] Doo-olo Agara - Web:S1:Social Media
+- [x] Eman Badreldin - Win:S2:Day Care
 - [x] Mohamed Rezk
-- [x] Eric Banigo
+- [x] Eric Banigo - Web:S1:Money Tracker
 - [x] Praise Koobee 
 - [x] Fazal Kamal - **(Onboard)**
 - [x] Justin Mathenson - **(Onboard)**
 - [x] Samuel Samuel - **(Onboard)**
 - [x] Kalpesh Kunvar - **(Onboard)**
 - [x] Dornubari Dumpe - **(Onboard)**
-- [x] Bilal Alissa - **(Onboard)**
+- [x] Bilal Alissa - **(Onboard)** - MIA 
 - [x] Samir Momin - **(Onboard)**
 - [x] Marmar Mojdehi - **(Onboard)**
-- [x] Shivani Bhatt - **(Onboard)**
+- [x] Shivani Bhatt - **(Onboard)** - MIA 
 - [x] Marwa Hassan - **(Onboard)**
 - [x] Rajdeep Minhas - **(Onboard)**
 - [x] Avalyn Jessen - **(Onboard)**
