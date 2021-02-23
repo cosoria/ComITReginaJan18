@@ -20,9 +20,9 @@ Students that have been invited and joined
 - [x] Mohamed Rezk
 - [x] Eric Banigo - Web:S1:Money Tracker
 - [x] Praise Koobee - ::
-- [x] Fazal Kamal - **(Onboard)** - :S1:
+- [x] Fazal Kamal - **(Onboard)** - ??:S1:??
 - [x] Justin Mathenson - **(Onboard)** - Web:S2:Game Leader Board
-- [x] Samuel Samuel - **(Onboard)**
+- [x] Samuel Samuel - **(Onboard)** - yt
 - [x] Kalpesh Kunvar - **(Onboard)** - Web:S2:Grocery App
 - [x] Dornubari Dumpe - **(Onboard)** - Web:S1:??
 - [x] Bilal Alissa - **(Onboard)** - MIA 
