@@ -9,12 +9,12 @@ Enjoy!
 
 Students that have been invited and joined
 ---------
-- [x] Christopher Law - Win:S2:Instant Messenger 
-- [X] Enesoso Charles - Web:S1:Parking Finding
 - [x] Shakirah Omotayo - Web:S1:Travel Suggest Website
 - [x] Eman Badreldin - Win:S2:Day Care
 - [x] Mohamed Rezk - Web:S1:Web Chat
 - [x] Praise Koobee - ??:??:?? 
+- [x] Christopher Law - **(Onboard)** - Win:S2:Instant Messenger 
+- [x] Enesoso Charles - **(Onboard)** - Web:S1:Parking Finding
 - [x] Andre Tichinski - **(Onboard)** - Web:S2:TimeTracking
 - [x] Doo-olo Agara - **(Onboard)** - Web:S1:Social Media
 - [x] Nitin Bhagat - **(Onboard)** - ??:????
