@@ -12,13 +12,13 @@ Students that have been invited and joined
 - [ ] Christopher Law - Win:S2:Instant Messenger 
 - [ ] Kai Xiao - 
 - [ ] Enesoso Charles - Web:S1:Parking Finding
-- [x] Andre Tichinski - Web:S2:TimeTracking
 - [x] Shakirah Omotayo - Web:S1:Travel Suggest Website
-- [x] Doo-olo Agara - Web:S1:Social Media
 - [x] Eman Badreldin - Win:S2:Day Care
 - [x] Mohamed Rezk - Web:S1:Web Chat
-- [x] Praise Koobee - ??:??:?? Not in class
-- [x] Nitin Bhagat  **(Onboard)** - MIA
+- [x] Praise Koobee - ??:??:?? 
+- [x] Andre Tichinski - **(Onboard)** - Web:S2:TimeTracking
+- [x] Doo-olo Agara - **(Onboard)** - Web:S1:Social Media
+- [x] Nitin Bhagat - **(Onboard)** - ??:????
 - [x] Eric Banigo -  **(Onboard)** - Web:S1:Money Tracker
 - [x] Fazal Kamal - **(Onboard)** - ??:S1:??
 - [x] Justin Mathenson - **(Onboard)** - Web:S2:Game Leader Board
