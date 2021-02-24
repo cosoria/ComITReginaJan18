@@ -10,7 +10,7 @@ Enjoy!
 Students that have been invited and joined
 ---------
 - [ ] Christopher Law - Win:S2:Instant Messenger 
-- [ ] Enesoso Charles - Web:S1:Parking Finding
+- [X] Enesoso Charles - Web:S1:Parking Finding
 - [x] Shakirah Omotayo - Web:S1:Travel Suggest Website
 - [x] Eman Badreldin - Win:S2:Day Care
 - [x] Mohamed Rezk - Web:S1:Web Chat
