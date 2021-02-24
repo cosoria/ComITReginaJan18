@@ -28,7 +28,7 @@ Students that have been invited and joined
 - [x] Bilal Alissa - **(Onboard)** - Web:S1:Project Management / Todo List 
 - [x] Samir Momin - **(Onboard)** - Web:S3:Freight App
 - [x] Marmar Mojdehi - **(Onboard)** - Web:S2:Parking App
-- [x] Shivani Bhatt - **(Onboard)** - MIA 
+- [x] Shivani Bhatt - **(Onboard)** - Web:S1:Movie Ticket System 
 - [x] Marwa Hassan - **(Onboard)** -- Web:S1:Online Portafolio
 - [x] Rajdeep Minhas - **(Onboard)** - Web:S1:Personal Portafolio
 - [x] Avalyn Jessen - **(Onboard)** - Web:S2:eCommerce
