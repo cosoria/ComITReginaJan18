@@ -10,7 +10,6 @@ Enjoy!
 Students that have been invited and joined
 ---------
 - [ ] Christopher Law - Win:S2:Instant Messenger 
-- [ ] Kai Xiao - 
 - [ ] Enesoso Charles - Web:S1:Parking Finding
 - [x] Shakirah Omotayo - Web:S1:Travel Suggest Website
 - [x] Eman Badreldin - Win:S2:Day Care
@@ -35,4 +34,5 @@ Students that have been invited and joined
 - [x] Gayatri Kunvar - **(Onboard)** - Web:S1:Salon Management
 - [x] Damain Jais - **(Onboard)**
 - [x] Carlos Osoria - **(Onboard)**
+- [ ] Kai Xiao - Seems to have left the course
 
