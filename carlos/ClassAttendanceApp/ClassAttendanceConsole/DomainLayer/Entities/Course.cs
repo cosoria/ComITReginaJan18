@@ -24,6 +24,14 @@ namespace DomainLayer.Entities
             Level = level;
         }
 
+        public Course(string title, DateTime startDate) : this(title, startDate, 0)
+        {
+        }
+
+        public Course() : this(string.Empty, DateTime.MinValue)
+        {
+        }
+
         public void SetTeacher(Teacher teacher)
         {
             Teacher = teacher;

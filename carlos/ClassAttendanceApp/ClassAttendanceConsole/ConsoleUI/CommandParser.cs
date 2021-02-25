@@ -10,7 +10,7 @@ namespace ConsoleUI
         {
             if (string.IsNullOrWhiteSpace(commandString))
             {
-                return null;
+                return new NoCommand();
             }
             
             commandString = commandString.ToLowerInvariant();

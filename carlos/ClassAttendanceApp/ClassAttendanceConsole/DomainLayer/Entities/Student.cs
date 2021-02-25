@@ -84,5 +84,38 @@ namespace DomainLayer.Entities
         {
             return PrintSummary();
         }
+        
+        public static bool operator ==(Student a, Student b)
+        {
+            if (ReferenceEquals(a, b)) return true;
+            if (a == null || b == null) return false;
+
+            return a.Equals(b);
+        }
+
+        public static bool operator !=(Student a, Student b)
+        {
+            return !(a == b);
+        }
+
+        protected bool Equals(Student other)
+        {
+            return FirstName == other.FirstName && 
+                   LastName == other.LastName && 
+                   Level == other.Level;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Student) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(FirstName, LastName, Level);
+        }
     }
 }

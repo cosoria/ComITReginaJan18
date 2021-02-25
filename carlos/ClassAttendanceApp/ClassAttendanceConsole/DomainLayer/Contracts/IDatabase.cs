@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DomainLayer.Entities;
 
 namespace DomainLayer.Contracts
@@ -7,10 +8,8 @@ namespace DomainLayer.Contracts
     {
         Student GetStudent(int id);
         IEnumerable<Student> GetAllStudents();
-
         Class GetClass(int id);
         IEnumerable<Class> GetAllClasses();
-
         Course GetCourse();
     }
 }

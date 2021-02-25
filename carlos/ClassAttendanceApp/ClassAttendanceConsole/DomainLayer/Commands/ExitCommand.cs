@@ -10,6 +10,11 @@ namespace DomainLayer.Commands
         {
         }
 
+        public CommandResult Execute()
+        {
+            return CommandResult.ExitResult();
+        }
+
         public string GetHelpText()
         {
             return 
@@ -24,9 +29,6 @@ namespace DomainLayer.Commands
 ";
         }
 
-        public CommandResult Execute()
-        {
-            return CommandResult.ExitResult();
-        }
+        
     }
 }
