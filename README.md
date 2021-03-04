@@ -24,7 +24,7 @@ Students that have been invited and joined
 - [x] Samuel Samuel - **(Onboard)** - Web:S2:Media Streamming 
 - [x] Kalpesh Kunvar - **(Onboard)** - Web:S2:Grocery App
 - [x] Dornubari Dumpe - **(Onboard)** - Web:S1:??
-- [x] Bilal Alissa - **(Onboard)** - Web:S1:Project Management / Todo List 
+- [x] Bilal Alissa - **(Onboard)** - Win||&&Web:S1:Project Management / Todo List 
 - [x] Samir Momin - **(Onboard)** - Web:S3:Freight App
 - [x] Marmar Mojdehi - **(Onboard)** - Web:S2:Parking App
 - [x] Shivani Bhatt - **(Onboard)** - Web:S1:Movie Ticket System 
