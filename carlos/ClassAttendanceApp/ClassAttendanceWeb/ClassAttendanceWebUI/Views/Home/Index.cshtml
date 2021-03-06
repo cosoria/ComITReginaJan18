@@ -1,20 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    var loginFailed = Convert.ToBoolean(ViewData["loginfailed"]);
-    var returlUrl = string.Empty;
-    if (ViewData["returlurl"] != null)
-    {
-        returlUrl = ViewData["returlurl"].ToString();
-    }
+    bool loginFailed = ViewBag.LoginFailed ?? false;
+    var returnUrl = ViewBag.ReturnUrl ?? string.Empty;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-
+    
     @if (loginFailed)
     {
-        <p><strong>You are not allowed to the secret page @returlUrl</strong></p>
+        <p><strong>You are not allowed to the secret page @returnUrl</strong></p>
     }
-    
+
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+

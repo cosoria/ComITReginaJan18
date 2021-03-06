@@ -4,11 +4,26 @@
     var returnUrl = ViewData["returnUrl"];
 }
 
-<h1>Login</h1>
+<h1>Application Login</h1>
+<p></p>
 <form action="/Home/Login" method="post">
-    <p>Login:<input type="text" name="username"> </p>
-    <p>Password: <input type="text" name="password"></p>
+    <table class="table">
+        <tr>
+            <td>Login:</td>
+            <td><input type="text" name="username" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="text" name="password" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" class="btn btn-outline-primary" /></td>
+        </tr>
+    </table>
     <input type="hidden" name="returnurl" value="@returnUrl">
-    <p><input type="submit" /></p>
 </form>
+
+<hr>
+&nbsp;&nbsp;or &nbsp;&nbsp;<a asp-action="GitHub" asp-controller="Home" class="btn btn-outline-primary">Log In with GitHub</a>
 
