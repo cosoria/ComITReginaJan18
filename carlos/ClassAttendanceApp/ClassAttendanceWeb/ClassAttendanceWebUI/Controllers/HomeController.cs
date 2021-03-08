@@ -7,6 +7,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using ClassAttendanceCommon.Interfaces;
+using ClassAttendanceData.Repositories;
+using ClassAttendanceDomain;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -82,39 +85,19 @@ namespace ClassAttendanceWebUI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy([FromServices] IStudentRepository repository)
         {
-            var users = GetUsers();
+            var users = GetUsers(repository);
 
             return View(users);
         }
 
 
-        private List<ApplicationUser> GetUsers()
+        private IEnumerable<ApplicationUser> GetUsers(IStudentRepository repository)
         {
-            return new List<ApplicationUser>()
-            {
-                new ApplicationUser()
-                {
-                    FirstName = "Optimus", LastName = "Prime", Language = "Cybertronian", Email = "optimus@cybertron.com"
-                },
-                new ApplicationUser()
-                {
-                    FirstName = "Bumble", LastName = "Bee", Language = "Cybertronian", Email = "bumblebee@cybertron.com"
-                },
-                new ApplicationUser()
-                {
-                    FirstName = "Iron", LastName = "Hide", Language = "Cybertronian", Email = "ironhide@cybertron.com"
-                },
-                new ApplicationUser()
-                {
-                    FirstName = "Mega", LastName = "Tron", Language = "Cybertronian", Email = "megatron@cybertron.com"
-                },
-                new ApplicationUser()
-                {
-                    FirstName = "Shock", LastName = "Wave", Language = "Cybertronian", Email = "shockwave@cybertron.com"
-                },
-            };
+            var repo = new ApplicationUserRepository();
+
+            return repo.GetAll();
         }
 
         public IActionResult About()

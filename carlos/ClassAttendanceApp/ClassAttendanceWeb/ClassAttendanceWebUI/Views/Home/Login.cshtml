@@ -6,23 +6,27 @@
 
 <h1>Application Login</h1>
 <p></p>
-<form action="/Home/Login" method="post">
+
+@this.GetType().Assembly.Location
+
+@using (Html.BeginForm("Login"))
+{
     <table class="table">
         <tr>
-            <td>Login:</td>
-            <td><input type="text" name="username" class="form-control"></td>
+            <td>@Html.Label("Login")</td>
+            <td>@Html.TextBox("username", "", new {@class="form-control"}) </td>
         </tr>
         <tr>
-            <td>Password:</td>
-            <td><input type="text" name="password" class="form-control"></td>
+            <td>@Html.Label("Password"):</td>
+            <td>@Html.Password("password", "", new { @class = "form-control" })</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td><input type="submit" class="btn btn-outline-primary" /></td>
         </tr>
     </table>
-    <input type="hidden" name="returnurl" value="@returnUrl">
-</form>
+    @Html.Hidden("returnUrl", returnUrl)
+}
 
 <hr>
 &nbsp;&nbsp;or &nbsp;&nbsp;<a asp-action="GitHub" asp-controller="Home" class="btn btn-outline-primary">Log In with GitHub</a>

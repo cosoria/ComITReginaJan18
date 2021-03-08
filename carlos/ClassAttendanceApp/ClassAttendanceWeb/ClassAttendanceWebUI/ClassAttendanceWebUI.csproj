@@ -15,4 +15,10 @@
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassAttendanceCommon\ClassAttendanceCommon.csproj" />
+    <ProjectReference Include="..\ClassAttendanceData\ClassAttendanceData.csproj" />
+    <ProjectReference Include="..\ClassAttendanceDomain\ClassAttendanceDomain.csproj" />
+  </ItemGroup>
+
 </Project>
