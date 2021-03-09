@@ -1,15 +1,20 @@
-﻿@{
+﻿@model HomePageModel
+@{
     ViewData["Title"] = "Home Page";
-    bool loginFailed = ViewBag.LoginFailed ?? false;
-    var returnUrl = ViewBag.ReturnUrl ?? string.Empty;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     
-    @if (loginFailed)
+    @if (Model.Authenticated)
     {
-        <p><strong>You are not allowed to the secret page @returnUrl</strong></p>
+        <div class="alert alert-primary" role="alert">
+            <h4 class="alert-heading">Hi there @Model.FullUserName !</h4>
+            <p>Aww yeah, you successfully authenticated to work on this important application. 
+                This example text is going to run a bit longer so that you can see how beautiful this system works the kind of content we have here.</p>
+            <hr>
+            <p class="mb-0">Whenever you need you can come back and remember to keep things nice and tidy.</p>
+        </div>
     }
 
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

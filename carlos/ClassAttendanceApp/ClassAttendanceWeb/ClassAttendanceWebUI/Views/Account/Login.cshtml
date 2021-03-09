@@ -1,31 +1,38 @@
-﻿
+﻿@model LoginModel
 @{
     ViewData["Title"] = "Login";
-    var returnUrl = ViewData["returnUrl"];
 }
 
 <h1>Application Login</h1>
 <p></p>
 
-@this.GetType().Assembly.Location
+
+
+@if (Model.Failed)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>@Model.Error</strong>
+    </div>    
+}
+
 
 @using (Html.BeginForm("Login"))
 {
     <table class="table">
         <tr>
-            <td>@Html.Label("Login")</td>
-            <td>@Html.TextBox("username", "", new {@class="form-control"}) </td>
+            <td>@Html.LabelFor(m => m.Email)</td>
+            <td>@Html.TextBoxFor(m=>m.Email, new { @class = "form-control" }) </td>
         </tr>
         <tr>
-            <td>@Html.Label("Password"):</td>
-            <td>@Html.Password("password", "", new { @class = "form-control" })</td>
+            <td>@Html.LabelFor(m => m.Password):</td>
+            <td>@Html.PasswordFor(m => m.Password, new { @class = "form-control" })</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td><input type="submit" class="btn btn-outline-primary" /></td>
         </tr>
     </table>
-    @Html.Hidden("returnUrl", returnUrl)
+    @Html.HiddenFor(m => m.ReturnUrl)
 }
 
 <hr>

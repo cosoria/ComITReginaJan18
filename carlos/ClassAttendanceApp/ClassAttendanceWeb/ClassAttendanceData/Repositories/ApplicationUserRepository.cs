@@ -52,6 +52,11 @@ namespace ClassAttendanceData.Repositories
             _allUsers.Remove(user);
         }
 
+        public IEnumerable<ApplicationUser> GetLockedUsers()
+        {
+            throw new NotImplementedException();
+        }
+
 
         private static readonly List<ApplicationUser> _allUsers = new List<ApplicationUser>()
         {
