@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassAttendanceDomain\ClassAttendanceDomain.csproj" />
+    <ProjectReference Include="..\Domain\ClassAttendance.Domain.csproj" />
   </ItemGroup>
 
 </Project>

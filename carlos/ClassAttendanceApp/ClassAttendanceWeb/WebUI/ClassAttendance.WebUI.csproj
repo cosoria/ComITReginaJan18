@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassAttendanceCommon\ClassAttendanceCommon.csproj" />
-    <ProjectReference Include="..\ClassAttendanceData\ClassAttendanceData.csproj" />
-    <ProjectReference Include="..\ClassAttendanceDomain\ClassAttendanceDomain.csproj" />
+    <ProjectReference Include="..\Common\ClassAttendance.Common.csproj" />
+    <ProjectReference Include="..\Data\ClassAttendance.Data.csproj" />
+    <ProjectReference Include="..\Domain\ClassAttendance.Domain.csproj" />
   </ItemGroup>
 
 </Project>
