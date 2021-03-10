@@ -8,6 +8,8 @@ namespace ClassAttendanceCommon.Interfaces
         IEnumerable<T> GetAll();
         IEnumerable<T> GetAllMatching(Predicate<T> condition);
         T GetOne(int id);
+
+        void Add(T item);
         void Update(T item);
         void Delete(int id);
 

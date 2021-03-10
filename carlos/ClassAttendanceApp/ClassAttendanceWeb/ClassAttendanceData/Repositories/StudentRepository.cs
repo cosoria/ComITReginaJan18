@@ -6,34 +6,6 @@ using ClassAttendanceDomain;
 
 namespace ClassAttendanceData.Repositories
 {
-    public class SQLStudentRepository : IStudentRepository
-    {
-        public IEnumerable<Student> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Student> GetAllMatching(Predicate<Student> condition)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Student GetOne(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Student item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     public class StudentRepository : IStudentRepository
     {
         public IEnumerable<Student> GetAll()
@@ -49,6 +21,11 @@ namespace ClassAttendanceData.Repositories
         public Student GetOne(int id)
         {
             return _allStudents.FirstOrDefault(s => s.Id == id);
+        }
+
+        public void Add(Student item)
+        {
+            _allStudents.Add(item);
         }
 
         public void Update(Student item)

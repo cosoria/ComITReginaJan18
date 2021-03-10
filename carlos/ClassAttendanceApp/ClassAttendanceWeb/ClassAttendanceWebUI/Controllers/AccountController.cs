@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ClassAttendanceCommon.Interfaces;
 using ClassAttendanceWebUI.Models;
 using ClassAttendanceWebUI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 
 namespace ClassAttendanceWebUI.Controllers
@@ -13,16 +14,45 @@ namespace ClassAttendanceWebUI.Controllers
     public class AccountController : Controller
     {
         private readonly INativeAuthenticationService _authenticationService;
+        private readonly IApplicationUserRepository _userRepository;
 
-        public AccountController(INativeAuthenticationService authenticationService)
+        public AccountController(
+            INativeAuthenticationService authenticationService,
+            IApplicationUserRepository userRepository)
         {
             _authenticationService = authenticationService;
+            _userRepository = userRepository;
+        }
+
+        [Authorize]
+        public IActionResult Secret()
+        {
+            var model = new SecretModel
+            {
+                Users = _userRepository.GetAll()
+            };
+
+            return View(model);
         }
 
         [HttpGet]
         public IActionResult Register()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(RegisterModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            _userRepository.Add(model.ToApplicationUser());
+
+            
+            return LocalRedirect("/");
         }
 
         [HttpGet]
@@ -51,8 +81,7 @@ namespace ClassAttendanceWebUI.Controllers
                 return View(model);
             }
         }
-
-
+        
         public async Task<IActionResult> Logout()
         {
             await _authenticationService.SignOut(this.HttpContext);

@@ -41,16 +41,7 @@ namespace ClassAttendanceWebUI.Controllers
             return View(model);
         }
         
-        [Authorize]
-        public IActionResult Secret()
-        {
-            var model = new SecretModel
-            {
-                Users = _userRepo.GetAll()
-            };
-
-            return View(model);
-        }
+        
 
         public IActionResult Privacy()
         {
