@@ -3,7 +3,7 @@ using ClassAttendance.Domain;
 
 namespace ClassAttendance.WebUI.Models
 {
-    public class SecretModel
+    public class SecretViewModel
     {
         public IEnumerable<ApplicationUser> Users { get; set; }
     }

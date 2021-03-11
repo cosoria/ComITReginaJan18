@@ -4,7 +4,7 @@ using ClassAttendance.Domain;
 
 namespace ClassAttendance.WebUI.Models
 {
-    public class HomePageModel
+    public class HomeViewModel
     {
         public ApplicationUser User { get; set; }
         public bool Authenticated => User != null;
@@ -24,7 +24,7 @@ namespace ClassAttendance.WebUI.Models
             }
         }
 
-        public HomePageModel()
+        public HomeViewModel()
         {
             User = null;
         }

@@ -3,7 +3,7 @@ using ClassAttendance.Domain;
 
 namespace ClassAttendance.WebUI.Models
 {
-    public class RegisterModel
+    public class RegisterViewModel
     {
         [Display(Name = "Email Address")]
         [StringLength(50)]
@@ -40,7 +40,7 @@ namespace ClassAttendance.WebUI.Models
 
     public static class RegisterModelExtensions
     {
-        public static ApplicationUser ToApplicationUser(this RegisterModel model)
+        public static ApplicationUser ToApplicationUser(this RegisterViewModel model)
         {
             return new ApplicationUser()
             {

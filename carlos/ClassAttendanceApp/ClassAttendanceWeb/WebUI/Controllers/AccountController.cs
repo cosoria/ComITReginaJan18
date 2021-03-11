@@ -23,7 +23,7 @@ namespace ClassAttendance.WebUI.Controllers
         [Authorize]
         public IActionResult Secret()
         {
-            var model = new SecretModel
+            var model = new SecretViewModel
             {
                 Users = _userRepository.GetAll()
             };
@@ -38,7 +38,7 @@ namespace ClassAttendance.WebUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(RegisterModel model)
+        public IActionResult Register(RegisterViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -54,7 +54,7 @@ namespace ClassAttendance.WebUI.Controllers
         [HttpGet]
         public IActionResult Login(string returnUrl = "/")
         {
-            var model = new LoginModel()
+            var model = new LoginViewModel()
             {
                 ReturnUrl = returnUrl
             };
@@ -63,7 +63,7 @@ namespace ClassAttendance.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginModel model)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
             var result = await _authenticationService.SignIn(this.HttpContext, model.Email, model.Password);
 

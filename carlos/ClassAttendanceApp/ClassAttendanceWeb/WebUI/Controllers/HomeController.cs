@@ -17,7 +17,7 @@ namespace ClassAttendance.WebUI.Controllers
         
         public IActionResult Index()
         {
-            var model = new HomePageModel();
+            var model = new HomeViewModel();
 
             if (User.Identity != null && User.Identity.IsAuthenticated)
             {
