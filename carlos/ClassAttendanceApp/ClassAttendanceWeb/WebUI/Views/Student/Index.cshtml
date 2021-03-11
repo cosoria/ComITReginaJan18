@@ -1,7 +1,32 @@
-﻿
+﻿@model StudentViewModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Students";
 }
 
-<h1>Index</h1>
+<h1>Students</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Level</th>
+        <th>Languages</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.GetLevelString()</td>
+                <td>@string.Join(",", student.Languages)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 

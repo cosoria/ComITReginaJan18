@@ -27,8 +27,6 @@ namespace ClassAttendance.WebUI.Controllers
             return View(model);
         }
         
-        
-
         public IActionResult Privacy()
         {
             var users = _userRepo.GetAll();

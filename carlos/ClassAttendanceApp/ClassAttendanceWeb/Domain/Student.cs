@@ -24,7 +24,8 @@ namespace ClassAttendance.Domain
             {
                 throw new ArgumentException("lastName");
             }
-            
+
+            Id = id;
             FirstName = firstName;
             LastName = lastName;
             Level = level;
@@ -67,7 +68,7 @@ namespace ClassAttendance.Domain
             return $"{FirstName} {LastName} Level:{level}";
         }
 
-        private string GetLevelString()
+        public string GetLevelString()
         {
             if (Level == 0) return "None";
             if (Level == 1) return "Beginner";
