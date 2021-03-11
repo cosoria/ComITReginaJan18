@@ -2,13 +2,12 @@
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceDomain;
+using ClassAttendance.Common.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 
-namespace ClassAttendanceWebUI.Services
+namespace ClassAttendance.WebUI.Services
 {
     public interface INativeAuthenticationService
     {

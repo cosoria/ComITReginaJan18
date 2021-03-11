@@ -1,15 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceWebUI.Models;
-using ClassAttendanceWebUI.Services;
+﻿using System.Threading.Tasks;
+using ClassAttendance.Common.Interfaces;
+using ClassAttendance.WebUI.Models;
+using ClassAttendance.WebUI.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
-namespace ClassAttendanceWebUI.Controllers
+namespace ClassAttendance.WebUI.Controllers
 {
     public class AccountController : Controller
     {

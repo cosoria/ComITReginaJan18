@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClassAttendanceDomain
+namespace ClassAttendance.Domain
 {
     public static class SystemTime
     {

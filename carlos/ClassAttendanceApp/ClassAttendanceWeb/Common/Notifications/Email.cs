@@ -1,4 +1,4 @@
-﻿namespace ClassAttendanceCommon.Notifications
+﻿namespace ClassAttendance.Common.Notifications
 {
     public class Email
     {

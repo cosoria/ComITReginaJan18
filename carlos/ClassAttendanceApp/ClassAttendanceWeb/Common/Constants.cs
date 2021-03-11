@@ -1,4 +1,4 @@
-﻿namespace ClassAttendanceCommon
+﻿namespace ClassAttendance.Common
 {
     public static class Constants
     {

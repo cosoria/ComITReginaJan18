@@ -1,4 +1,4 @@
-﻿namespace ClassAttendanceData.Repositories
+﻿namespace ClassAttendance.Data.Repositories
 {
     public class CourseRepository
     {

@@ -1,25 +1,17 @@
+using AspNet.Security.OAuth.GitHub;
+using ClassAttendance.Common.Interfaces;
+using ClassAttendance.Data.Repositories;
+using ClassAttendance.WebUI.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.OAuth;
-using System.Security.Claims;
-using AspNet.Security.OAuth.GitHub;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceData.Repositories;
-using ClassAttendanceDomain;
-using ClassAttendanceWebUI.Services;
-using Microsoft.AspNetCore.Http;
 
-namespace ClassAttendanceWebUI
+namespace ClassAttendance.WebUI
 {
     
 

@@ -1,4 +1,4 @@
-﻿namespace ClassAttendanceDomain
+﻿namespace ClassAttendance.Domain
 {
     public enum AttendanceStatus
     {

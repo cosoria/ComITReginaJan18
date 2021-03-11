@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Xml;
-using ClassAttendanceDomain;
+using ClassAttendance.Domain;
 
-namespace ClassAttendanceCommon.Interfaces
+namespace ClassAttendance.Common.Interfaces
 {
     public interface IApplicationUserRepository : IRepository<ApplicationUser>
     {

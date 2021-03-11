@@ -1,7 +1,7 @@
 ﻿using System;
-using ClassAttendanceCommon.Notifications;
+using ClassAttendance.Common.Notifications;
 
-namespace ClassAttendanceCommon.Interfaces
+namespace ClassAttendance.Common.Interfaces
 {
     public interface IEmailService
     {

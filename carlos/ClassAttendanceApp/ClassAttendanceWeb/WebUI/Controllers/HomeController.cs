@@ -1,24 +1,10 @@
-﻿using ClassAttendanceWebUI.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceData.Repositories;
-using ClassAttendanceDomain;
-using ClassAttendanceWebUI.Services;
+﻿using System.Diagnostics;
+using ClassAttendance.Common.Interfaces;
+using ClassAttendance.WebUI.Models;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Http;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.AspNetCore.Mvc;
 
-namespace ClassAttendanceWebUI.Controllers
+namespace ClassAttendance.WebUI.Controllers
 {
     public class HomeController : Controller
     {

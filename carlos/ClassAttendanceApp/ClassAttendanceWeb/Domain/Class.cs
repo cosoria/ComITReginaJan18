@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClassAttendanceDomain
+namespace ClassAttendance.Domain
 {
     public class Class 
     {

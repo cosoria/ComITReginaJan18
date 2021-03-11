@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceDomain;
+using ClassAttendance.Common.Interfaces;
+using ClassAttendance.Domain;
 
-namespace ClassAttendanceData.Repositories
+namespace ClassAttendance.Data.Repositories
 {
     public class StudentRepository : IStudentRepository
     {

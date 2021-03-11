@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ClassAttendanceDomain;
+using ClassAttendance.Domain;
 
-namespace ClassAttendanceWebUI.Models
+namespace ClassAttendance.WebUI.Models
 {
     public class SecretModel
     {

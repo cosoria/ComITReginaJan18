@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Security.Claims;
-using ClassAttendanceDomain;
+using ClassAttendance.Domain;
 
-namespace ClassAttendanceWebUI.Models
+namespace ClassAttendance.WebUI.Models
 {
     public class HomePageModel
     {

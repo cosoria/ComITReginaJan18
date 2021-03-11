@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices.ComTypes;
-using ClassAttendanceCommon;
-using ClassAttendanceCommon.Interfaces;
-using ClassAttendanceDomain;
+using ClassAttendance.Common;
+using ClassAttendance.Common.Interfaces;
+using ClassAttendance.Domain;
 
-namespace ClassAttendanceData.Repositories
+namespace ClassAttendance.Data.Repositories
 {
     public class ApplicationUserRepository : IApplicationUserRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace ClassAttendanceDomain
+﻿namespace ClassAttendance.Domain
 {
     public class Teacher
     {

@@ -1,6 +1,6 @@
-﻿using ClassAttendanceDomain;
+﻿using ClassAttendance.Domain;
 
-namespace ClassAttendanceCommon.Interfaces
+namespace ClassAttendance.Common.Interfaces
 {
     public interface IStudentRepository : IRepository<Student>
     {
