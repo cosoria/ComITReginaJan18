@@ -6,48 +6,11 @@ using ClassAttendance.Domain;
 
 namespace ClassAttendance.Data.Repositories
 {
-    public class StudentRepository : IStudentRepository
+    public class StudentRepository : InMemoryRepository<Student>, IStudentRepository
     {
-        public IEnumerable<Student> GetAll()
+        protected override IList<Student> GetItemsInternal()
         {
             return _allStudents;
-        }
-
-        public IEnumerable<Student> GetAllMatching(Predicate<Student> condition)
-        {
-            return _allStudents.Where(s => condition(s)).ToArray();
-        }
-
-        public Student GetOne(int id)
-        {
-            return _allStudents.FirstOrDefault(s => s.Id == id);
-        }
-
-        public void Add(Student item)
-        {
-            _allStudents.Add(item);
-        }
-
-        public void Update(Student item)
-        {
-            var user = GetOne(item.Id);
-
-            if (user == null)
-            {
-                throw new ArgumentException("Application user not found");
-            }
-        }
-
-        public void Delete(int id)
-        {
-            var user = GetOne(id);
-
-            if (user == null)
-            {
-                throw new ArgumentException("Application user not found");
-            }
-
-            _allStudents.Remove(user);
         }
 
         private static readonly List<Student> _allStudents = new List<Student>()
@@ -77,5 +40,7 @@ namespace ClassAttendance.Data.Repositories
             new Student(23,"Nitin", "Bhagat", 1, new[] { "" }),
             new Student(24,"Samir", "Momin", 2, new[] { "" }),
         };
+
+        
     }
 }

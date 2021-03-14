@@ -5,6 +5,7 @@ namespace ClassAttendance.WebUI.Models
 {
     public class RegisterViewModel
     {
+        
         [Display(Name = "Email Address")]
         [StringLength(50)]
         [Required(ErrorMessage = "Please enter your email address")]
@@ -22,11 +23,13 @@ namespace ClassAttendance.WebUI.Models
         [StringLength(50)]
         [Required(ErrorMessage = "Please enter your first name")]
         public string FirstName { get; set; }
+        
 
         [Display(Name = "Last Name")]
         [StringLength(50)]
         [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
+
 
         [Display(Name = "Preferred Language")]
         [StringLength(50)]

@@ -38,8 +38,11 @@ namespace ClassAttendance.WebUI
 
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<INativeAuthenticationService, NativeAuthenticationService>();
+            services.AddScoped<IEnrollmentService, EnrollmentService>();
         }
 
         private void SetGitHubAuthentication(GitHubAuthenticationOptions options)

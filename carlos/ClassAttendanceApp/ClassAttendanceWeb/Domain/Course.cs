@@ -3,40 +3,39 @@ using System.Collections.Generic;
 
 namespace ClassAttendance.Domain
 {
-    public class Course 
+    public class Course : IEntity
     {
-        private List<Student> _students = new List<Student>();
-        private List<Class> _classes = new List<Class>();
+        private readonly List<Student> _students = new List<Student>();
+        private readonly List<Class> _classes = new List<Class>();
         
+        public int Id { get; private set; }
         public string Title { get; private set; }
         public DateTime StartDate { get; private set; }
         public int Level { get; private set; }
-        public IEnumerable<Student> Students { get { return _students; } }
-        public IEnumerable<Class> Classes { get { return _classes; } }
+        public IReadOnlyList<Student> Students => _students;
+        public IReadOnlyList<Class> Classes => _classes;
         public Teacher Teacher { get; private set; }
-        public TeacherAssistant TeacherAssistant { get; private set; }
+        public Teacher TeacherAssistant { get; private set; }
 
-        public Course(string title, DateTime startDate, int level)
+        public Course(int id, string title, DateTime startDate, int level)
         {
+            Id = id;
             Title = title;
             StartDate = startDate;
             Level = level;
         }
 
-        public Course(string title, DateTime startDate) : this(title, startDate, 0)
+        public Course(int id, string title, DateTime startDate) : this(id, title, startDate, 0)
         {
         }
-
-        public Course() : this(string.Empty, DateTime.MinValue)
-        {
-        }
+        
 
         public void SetTeacher(Teacher teacher)
         {
             Teacher = teacher;
         }
         
-        public void SetTeacherAssistant(TeacherAssistant assistant)
+        public void SetTeacherAssistant(Teacher assistant)
         {
             TeacherAssistant = assistant;
         }

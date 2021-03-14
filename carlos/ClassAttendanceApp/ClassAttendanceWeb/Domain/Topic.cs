@@ -3,11 +3,13 @@ namespace ClassAttendance.Domain
 {
     public class Topic 
     {
+        public int Id { get; private set; }
         public string Title { get; private set; }
         public int Level { get; private set; }
 
-        public Topic(string title, int level)
+        public Topic(int id, string title, int level)
         {
+            Id = id;
             Title = title;
             Level = level;
         }

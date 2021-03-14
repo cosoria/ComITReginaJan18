@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace ClassAttendance.Domain
 {
-    public class Student 
+    public class Student : IEntity
     {
-        private List<string> _languages = new List<string>();
+        private readonly List<string> _languages = new List<string>();
 
         public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public int Level { get; private set; }
-        public IEnumerable<string> Languages { get { return _languages; } }
-        
+        public IReadOnlyList<string> Languages => _languages;
+
         public Student(int id, string firstName, string lastName, int level ,IEnumerable<string> languages)
         {
             if (string.IsNullOrWhiteSpace(firstName))
@@ -41,6 +41,22 @@ namespace ClassAttendance.Domain
             }
 
             Level = level;
+        }
+
+        public void NameChange(string firstName, string lastName)
+        {
+            if (string.IsNullOrWhiteSpace(firstName))
+            {
+                throw new ArgumentException("firstName");
+            }
+
+            if (string.IsNullOrWhiteSpace(lastName))
+            {
+                throw new ArgumentException("lastName");
+            }
+
+            FirstName = firstName;
+            LastName = lastName;
         }
         
         public void AddProgrammingLanguage(string language)
@@ -78,34 +94,18 @@ namespace ClassAttendance.Domain
 
             return "Unknown";
         }
-
+        
         public override string ToString()
         {
             return PrintSummary();
         }
-        
-        public static bool operator ==(Student a, Student b)
-        {
-            if (ReferenceEquals(a, b)) return true;
-
-            if (a == null || b == null) return false;
-
-            return a.Equals(b);
-        }
-
-        public static bool operator !=(Student a, Student b)
-        {
-            return !(a == b);
-        }
 
         protected bool Equals(Student other)
         {
-            return FirstName == other.FirstName && 
-                   LastName == other.LastName && 
-                   Level == other.Level;
+            return Id == other.Id;
         }
 
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
@@ -115,7 +115,7 @@ namespace ClassAttendance.Domain
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, FirstName, LastName, Level);
+            return Id.GetHashCode();
         }
     }
 }

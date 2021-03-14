@@ -3,18 +3,22 @@ using System.Collections.Generic;
 
 namespace ClassAttendance.Domain
 {
-    public class Class 
+    public class Class : IEntity
     {
-        private List<Topic> _topics = new List<Topic>();
-        private List<Attendance> _attendance = new List<Attendance>();
+
+        private readonly List<Topic> _topics = new List<Topic>();
+        private readonly List<Attendance> _attendance = new List<Attendance>();
+
+        public int Id { get; private set; }
         public string Title { get; private set; }
         public DateTime StartDate { get; private set; }
-        public IEnumerable<Topic> Topics { get { return _topics; } }
-        public IEnumerable<Attendance> Attendance { get { return _attendance; } }
+        public IReadOnlyList<Topic> Topics => _topics;
+        public IReadOnlyList<Attendance> Attendance => _attendance;
         public Course Course { get; private set; }
 
-        public Class(string title, DateTime startDate, IEnumerable<Topic> topics, Course course)
+        public Class(int id, string title, DateTime startDate, IEnumerable<Topic> topics, Course course)
         {
+            Id = id;
             Title = title;
             StartDate = startDate;
             _topics.AddRange(topics);
