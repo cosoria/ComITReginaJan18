@@ -13,6 +13,7 @@
         <th>Last Name</th>
         <th>Level</th>
         <th>Languages</th>
+        <th><a class="btn btn-primary btn-sm" asp-action="Add">Add</a></th>
     </tr>
     </thead>
     <tbody>
@@ -24,7 +25,10 @@
                 <td>@student.LastName</td>
                 <td>@student.GetLevelString()</td>
                 <td>@string.Join(",", student.Languages)</td>
-                <td><a class="btn btn-primary btn-sm" asp-action="Update" asp-route-id="@student.Id">Edit</a></td>
+                <td>
+                    <a class="btn btn-primary btn-sm" asp-action="Update" asp-route-id="@student.Id">Edit</a>
+                    <a class="btn btn-primary btn-sm" asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

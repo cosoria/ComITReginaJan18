@@ -1,21 +1,71 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace ClassAttendance.Domain
 {
-    public class ApplicationUser : IEntity
+    public class ApplicationUser : Entity
     {
-        private readonly List<string> _roles = new List<string>();
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string Language { get; set; }
-        public IReadOnlyList<string> Roles => _roles;
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string Email { get; private set; }
+        public string Password { get; private set; }
+        public string Language { get; private set; }
+        public virtual ApplicationUserRole Role { get; private set; }
 
-        public void AddRole(string role)
+        protected ApplicationUser()
         {
-            _roles.Add(role);
+        }
+
+        public ApplicationUser(int id, string firstName, string lastName, string email, string password) : base(id)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Password = password;
+        }
+
+        public ApplicationUser(string firstName, string lastName, string email, string password) 
+            : this(0, firstName, lastName, email, password)
+        {
+        }
+
+        public void SetLanguage(string language)
+        {
+            Language = language;
+        }
+
+        public void SetRole(ApplicationUserRole role)
+        {
+            Role = role;
+        }
+
+        public override string ToString()
+        {
+            if (this.Role == null)
+            {
+                return $"{Id}:{FirstName} {LastName} | Role: null";
+            }
+            else
+            {
+                return $"{Id}:{FirstName} {LastName} | Role: {Role.Role}";
+            }
+            
+        }
+
+        public void ChangeName(string firstName, string lastName)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+        }
+
+        public void ChangePassword(string password)
+        {
+            this.Password = password;
+        }
+
+        public void ChangeEmail(string email)
+        {
+            this.Email = email;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ClassAttendance.Common
+﻿using ClassAttendance.Domain;
+
+namespace ClassAttendance.Common
 {
     public static class Constants
     {
@@ -6,9 +8,9 @@
 
         public static class Roles
         {
-            public const string Admin = "Admin";
-            public const string User = "User";
-            public const string Transformer = "Transformer";
+            public static readonly ApplicationUserRole Admin = new ApplicationUserRole(1,"Admin");
+            public static readonly ApplicationUserRole User = new ApplicationUserRole(2, "User");
+            public static readonly ApplicationUserRole Transformer = new ApplicationUserRole(3, "Transformer");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using ClassAttendance.Common;
 using ClassAttendance.Common.Interfaces;
 using ClassAttendance.Domain;
@@ -43,11 +44,10 @@ namespace ClassAttendance.Data.Repositories
                 throw new ArgumentException("Application user not found");
             }
 
-            user.FirstName = item.FirstName;
-            user.LastName = item.LastName;
-            user.Email = item.Email;
-            user.Language = item.Language;
-            user.Password = item.Password;
+            user.ChangeName(item.FirstName, item.LastName);
+            user.ChangePassword(item.Password);
+            user.ChangeEmail(item.Email);
+            user.SetLanguage(item.Language);
         }
 
         public void Delete(int id)
@@ -79,6 +79,7 @@ namespace ClassAttendance.Data.Repositories
 
             var users = new List<ApplicationUser>()
             {
+                /*
                 new ApplicationUser()
                 {
                     Id = 0, Password = "password", FirstName = "Admin", LastName = "ComIT", Language = "English", Email = "admin@comit.com"
@@ -103,6 +104,7 @@ namespace ClassAttendance.Data.Repositories
                 {
                     Id = 5, Password = "password", FirstName = "Shock", LastName = "Wave", Language = "Cybertronian", Email = "shockwave@cybertron.com",
                 }
+                */
             };
 
             _allUsers.AddRange(users);
@@ -111,15 +113,15 @@ namespace ClassAttendance.Data.Repositories
             {
                 if (user.Email.StartsWith("admin"))
                 {
-                    user.AddRole(Constants.Roles.Admin);
+                    user.SetRole(Constants.Roles.Admin);
                 }
 
                 if (user.Email.EndsWith("cybertron.com"))
                 {
-                    user.AddRole(Constants.Roles.Transformer);
+                    user.SetRole(Constants.Roles.Transformer);
                 }
 
-                user.AddRole(Constants.Roles.User);
+                user.SetRole(Constants.Roles.User);
             }
         }
     }

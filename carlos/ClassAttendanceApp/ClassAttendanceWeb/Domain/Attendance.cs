@@ -7,6 +7,10 @@ namespace ClassAttendance.Domain
         public Student Student { get; private set; }
         public AttendanceStatus Status { get; private set; }
 
+        protected Attendance()
+        {
+        }
+
         public Attendance(Class @class, Student student, AttendanceStatus status)
         {
             Class = @class;

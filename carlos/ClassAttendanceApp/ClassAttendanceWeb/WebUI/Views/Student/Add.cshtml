@@ -1,7 +1,19 @@
-﻿
+﻿@model StudentUpdateViewModel
+
 @{
     ViewData["Title"] = "Add";
 }
 
-<h1>Add</h1>
+<h1>Add Student</h1>
 
+<form asp-action="Add" method="post" role="form">
+    
+    <partial model="@Model" name="_StudentDetails" />
+    
+    <div class="form-group">
+        <div class="col-md-7">
+            <input type="submit" value="Add" class="btn btn-primary" />
+            <a asp-action="Index" class="col-md-2">Back to List</a>
+        </div>
+    </div>
+</form>

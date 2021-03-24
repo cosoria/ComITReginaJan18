@@ -36,5 +36,10 @@
         "README.md"
       ]
     }
-  ]
+  ,
+{
+  "library": "bootstrap-icons@1.4.0",
+  "destination": "wwwroot/lib/bootstrap-icons/"
+}
+]
 }

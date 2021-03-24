@@ -36,17 +36,16 @@ namespace ClassAttendance.WebUI.Models
                 return;
             }
 
-            if (User == null)
-            {
-                User = new ApplicationUser();
-            }
+            var Id = Convert.ToInt32(principal.FindFirstValue(ClaimTypes.NameIdentifier));
+            var email = principal.FindFirstValue(ClaimTypes.Email);
+            var firstName = principal.FindFirstValue(ClaimTypes.GivenName);
+            var lastName = principal.FindFirstValue(ClaimTypes.Surname);
+            var Language = principal.FindFirstValue("Language");
+            var password = "";
 
-            User.Id = Convert.ToInt32(principal.FindFirstValue(ClaimTypes.NameIdentifier));
-            User.Email = principal.FindFirstValue(ClaimTypes.Email);
-            User.FirstName = principal.FindFirstValue(ClaimTypes.GivenName);
-            User.LastName = principal.FindFirstValue(ClaimTypes.Surname);
-            User.Language = principal.FindFirstValue("Language");
-            User.Password = "";
+
+            User = new ApplicationUser(firstName, lastName, email, password);
+            User.SetLanguage(Language);
         }
     }
 }

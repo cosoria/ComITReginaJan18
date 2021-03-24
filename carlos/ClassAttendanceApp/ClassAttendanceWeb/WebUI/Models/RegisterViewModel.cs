@@ -45,14 +45,10 @@ namespace ClassAttendance.WebUI.Models
     {
         public static ApplicationUser ToApplicationUser(this RegisterViewModel model)
         {
-            return new ApplicationUser()
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Email = model.Email,
-                Language = model.Language,
-                Password = model.Password
-            };
+            var user =  new ApplicationUser(model.FirstName, model.LastName, model.Email, model.Password);
+            user.SetLanguage(model.Language);
+
+            return user;
         }
     }
 }

@@ -1,5 +1,6 @@
 using AspNet.Security.OAuth.GitHub;
 using ClassAttendance.Common.Interfaces;
+using ClassAttendance.Data;
 using ClassAttendance.Data.Repositories;
 using ClassAttendance.WebUI.Services;
 using Microsoft.AspNetCore.Authentication;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +29,9 @@ namespace ClassAttendance.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ClassAttendanceDbContext>(
+                option => option.UseSqlServer(Configuration.GetConnectionString("LocalDbConnection")));
+
             services.AddAuthentication(SetAppAuthentication)
                     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, 
                                SetAppCookieAuthentication)

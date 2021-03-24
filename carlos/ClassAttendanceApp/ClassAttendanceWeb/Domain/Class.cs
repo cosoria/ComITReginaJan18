@@ -3,26 +3,34 @@ using System.Collections.Generic;
 
 namespace ClassAttendance.Domain
 {
-    public class Class : IEntity
+    public class Class : Entity
     {
 
         private readonly List<Topic> _topics = new List<Topic>();
         private readonly List<Attendance> _attendance = new List<Attendance>();
 
-        public int Id { get; private set; }
         public string Title { get; private set; }
         public DateTime StartDate { get; private set; }
-        public IReadOnlyList<Topic> Topics => _topics;
-        public IReadOnlyList<Attendance> Attendance => _attendance;
-        public Course Course { get; private set; }
+        public virtual IReadOnlyList<Topic> Topics => _topics;
 
-        public Class(int id, string title, DateTime startDate, IEnumerable<Topic> topics, Course course)
+        // public virtual IReadOnlyList<Attendance> Attendance => _attendance;
+        public virtual Course Course { get; private set; }
+
+        protected Class()
         {
-            Id = id;
+        }
+
+        public Class(int id, string title, DateTime startDate, IEnumerable<Topic> topics, Course course) : base(id)
+        {
             Title = title;
             StartDate = startDate;
             _topics.AddRange(topics);
             Course = course;
+        }
+
+        public Class(string title, DateTime startDate, IEnumerable<Topic> topics, Course course) 
+            : this(0, title, startDate, topics, course)
+        {
         }
 
         public void StartClass()

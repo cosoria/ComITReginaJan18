@@ -3,17 +3,20 @@ using System.Collections.Generic;
 
 namespace ClassAttendance.Domain
 {
-    public class Student : IEntity
+    public class Student : Entity
     {
         private readonly List<string> _languages = new List<string>();
 
-        public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public int Level { get; private set; }
-        public IReadOnlyList<string> Languages => _languages;
+        public virtual IReadOnlyList<string> Languages => _languages;
 
-        public Student(int id, string firstName, string lastName, int level ,IEnumerable<string> languages)
+        protected Student()
+        {
+        }
+
+        public Student(int id, string firstName, string lastName, int level ,IEnumerable<string> languages) : base(id)
         {
             if (string.IsNullOrWhiteSpace(firstName))
             {
@@ -25,12 +28,16 @@ namespace ClassAttendance.Domain
                 throw new ArgumentException("lastName");
             }
 
-            Id = id;
             FirstName = firstName;
             LastName = lastName;
             Level = level;
 
             _languages.AddRange(languages);
+        }
+
+        public Student(string firstName, string lastName, int level, IEnumerable<string> languages) 
+            : this(0, firstName, lastName, level, languages)
+        {
         }
 
         public void SetLevel(int level)
@@ -98,24 +105,6 @@ namespace ClassAttendance.Domain
         public override string ToString()
         {
             return PrintSummary();
-        }
-
-        protected bool Equals(Student other)
-        {
-            return Id == other.Id;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Student) obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return Id.GetHashCode();
         }
     }
 }

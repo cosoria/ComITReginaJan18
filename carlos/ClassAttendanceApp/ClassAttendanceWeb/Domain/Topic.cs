@@ -1,15 +1,21 @@
 ﻿
 namespace ClassAttendance.Domain
 {
-    public class Topic 
+    public class Topic : Entity
     {
-        public int Id { get; private set; }
         public string Title { get; private set; }
         public int Level { get; private set; }
 
-        public Topic(int id, string title, int level)
+        protected Topic()
         {
-            Id = id;
+        }
+
+        public Topic(string title, int level) : this(0, title, level)
+        {
+        }
+
+        public Topic(int id, string title, int level) : base(id)
+        {
             Title = title;
             Level = level;
         }

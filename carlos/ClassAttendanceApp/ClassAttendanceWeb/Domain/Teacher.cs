@@ -1,18 +1,28 @@
-﻿namespace ClassAttendance.Domain
+﻿using System.Runtime.CompilerServices;
+
+namespace ClassAttendance.Domain
 {
-    public class Teacher : IEntity
+    
+    public class Teacher : Entity
     {
-        public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string Experience { get; private set; }
-        
 
-        public Teacher(int id, string firstName, string lastName)
+        protected Teacher() 
         {
-            Id = id;
+        }
+
+        public Teacher(int id, string firstName, string lastName) : base(id)
+        {
             FirstName = firstName;
             LastName = lastName;
+        }
+
+        public Teacher(string firstName, string lastName) : 
+            this(0, firstName, lastName)
+        {
+            
         }
 
         public void SetExperience(string experience)

@@ -25,6 +25,8 @@ namespace ClassAttendance.Data.Repositories
 
         public void Add(T item)
         {
+            // var nextId = GetItemsInternal().Count + 1;
+            // item.Id = nextId;
             GetItemsInternal().Add(item);
         }
 
