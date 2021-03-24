@@ -177,16 +177,16 @@ namespace ClassAttendance.DbTool
             /*
                 DELETE FROM [Users]
                 DELETE FROM [Roles]
-                DELETE FROM [Topic]
-                DELETE FROM [Class]
+                DELETE FROM [Topics]
+                DELETE FROM [Classes]
                 DELETE FROM [Students]
                 DELETE FROM [Courses]
                 DELETE FROM [Teachers]
 
                 DBCC CHECKIDENT ('Users', RESEED, 0)
                 DBCC CHECKIDENT ('Roles', RESEED, 0)
-                DBCC CHECKIDENT ('Topic', RESEED, 0)
-                DBCC CHECKIDENT ('Class', RESEED, 0)
+                DBCC CHECKIDENT ('Topics', RESEED, 0)
+                DBCC CHECKIDENT ('Classes', RESEED, 0)
                 DBCC CHECKIDENT ('Teachers', RESEED, 0)
                 DBCC CHECKIDENT ('Students', RESEED, 0)
                 DBCC CHECKIDENT ('Courses', RESEED, 0)

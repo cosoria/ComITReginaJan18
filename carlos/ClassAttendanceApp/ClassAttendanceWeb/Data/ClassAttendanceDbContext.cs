@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using ClassAttendance.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -30,7 +31,40 @@ namespace ClassAttendance.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<ApplicationUserRole>(m =>
+            {
+                m.ToTable("Roles").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<ApplicationUser>(m =>
+            {
+                m.ToTable("Users").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<Course>(m =>
+            {
+                m.ToTable("Courses").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<Class>(m =>
+            {
+                m.ToTable("Classes").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<Topic>(m =>
+            {
+                m.ToTable("Topics").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<Student>(m =>
+            {
+                m.ToTable("Students").HasKey(r => r.Id);
+            });
+
+            modelBuilder.Entity<Teacher>(m =>
+            {
+                m.ToTable("Teachers").HasKey(r => r.Id);
+            });
         }
 
     }
