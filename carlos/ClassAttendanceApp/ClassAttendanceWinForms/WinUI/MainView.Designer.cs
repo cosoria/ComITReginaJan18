@@ -34,6 +34,7 @@ namespace WinUI
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lstLanguages = new System.Windows.Forms.ListBox();
@@ -145,6 +146,7 @@ namespace WinUI
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.btnAddStudent);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.lstLanguages);
@@ -161,20 +163,32 @@ namespace WinUI
             this.panel5.Size = new System.Drawing.Size(732, 540);
             this.panel5.TabIndex = 1;
             // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.Location = new System.Drawing.Point(579, 307);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(130, 23);
+            this.btnAddStudent.TabIndex = 15;
+            this.btnAddStudent.Text = "Add Student";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Visible = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(681, 286);
+            this.button2.Location = new System.Drawing.Point(681, 138);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 23);
             this.button2.TabIndex = 14;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(646, 286);
+            this.button1.Location = new System.Drawing.Point(646, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 23);
             this.button1.TabIndex = 13;
@@ -186,7 +200,7 @@ namespace WinUI
             // 
             this.lstLanguages.FormattingEnabled = true;
             this.lstLanguages.ItemHeight = 17;
-            this.lstLanguages.Location = new System.Drawing.Point(90, 157);
+            this.lstLanguages.Location = new System.Drawing.Point(90, 167);
             this.lstLanguages.Name = "lstLanguages";
             this.lstLanguages.Size = new System.Drawing.Size(619, 123);
             this.lstLanguages.TabIndex = 12;
@@ -204,7 +218,7 @@ namespace WinUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 157);
+            this.label3.Location = new System.Drawing.Point(12, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 10;
@@ -295,6 +309,7 @@ namespace WinUI
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -305,6 +320,7 @@ namespace WinUI
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel3
             // 
@@ -318,21 +334,23 @@ namespace WinUI
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(202, 10);
+            this.btnAdd.Location = new System.Drawing.Point(161, 10);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(38, 23);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(161, 10);
+            this.btnRemove.Location = new System.Drawing.Point(205, 10);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(35, 23);
             this.btnRemove.TabIndex = 0;
             this.btnRemove.Text = "-";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // tabPage2
             // 
@@ -715,6 +733,7 @@ namespace WinUI
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "MainView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Manager";
             this.Load += new System.EventHandler(this.MainView_Load);
             this.tabControl1.ResumeLayout(false);
@@ -803,6 +822,7 @@ namespace WinUI
         private System.Windows.Forms.ListBox lstLanguages;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddStudent;
     }
 }
 
