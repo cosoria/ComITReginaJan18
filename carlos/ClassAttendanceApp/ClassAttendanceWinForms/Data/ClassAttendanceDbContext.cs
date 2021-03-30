@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using ClassAttendance.Domain;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace ClassAttendance.Data
+namespace Data
 {
     public class ClassAttendanceDbContext : DbContext
     {

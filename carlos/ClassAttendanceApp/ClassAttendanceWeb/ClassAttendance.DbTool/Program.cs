@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Transactions;
 using ClassAttendance.Data;
 using ClassAttendance.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -169,6 +171,31 @@ namespace ClassAttendance.DbTool
                 {
                     Console.WriteLine(user.ToString());
                 }
+
+                var studentCourse = context.StudentCourses.Where(sc => EF.Functions.Like(sc.LastName, "%ar%")).ToArray();
+
+                foreach (var sc in studentCourse)
+                {
+                    Console.WriteLine($" {sc.FirstName} {sc.LastName} {sc.Title} {sc.StartDate}");
+                }
+                /*
+
+                var courses = context.Courses
+                    .Where(c => c.Students.Where(s => s.LastName.Length > 4).Any())
+                    .Where(c => c.Classes.Where(c => c.Topics.Any()).Any())
+                    .Select(c => new  { c.Title, c.StartDate, c.Classes.Aggregate(),  })
+
+                var teacher = context.Teachers.Where(t => t.LastName == "Jais").Select( t => new { t.Experience });
+
+                var courses = context.Courses.Where(c => c.Teacher.FirstName == "Carlos").ToList();
+
+                var classesWithTopics = context
+                    .Courses
+                    .Where(c => c.Title.Contains("C#"))
+                    .Select(c => c.Classes)
+                    .SelectMany(c => c.Select( c => c.Topics));
+                */
+                // var coursesWhereStudentKnow = context.Courses.Where(c => c.Students.Where(s => s.Languages.Contains("C#")).Count() > 1).ToList();
             }
         }
         
